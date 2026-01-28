@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: service-demo-001
+  name: service-demo-001
+  namespace: backend-app
+spec:
+  selector:
+    app: demo-001
+  ports:
+  - name: http
+    protocol: TCP
+    port: 8080
+    targetPort: 8080
+  type: ClusterIP

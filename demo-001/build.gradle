@@ -1,0 +1,9 @@
+description = "demo-001"
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+}
+
+jar {
+    enabled = false
+}

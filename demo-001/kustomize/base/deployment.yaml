@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-001
+  labels:
+    app: demo-001
+  namespace: backend-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-001
+  template:
+    metadata:
+      labels:
+        app: demo-001
+    spec:
+      containers:
+        - name: demo-001-container
+          image: spring-quick-001:1.0
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
